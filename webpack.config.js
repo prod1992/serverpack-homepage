@@ -97,7 +97,7 @@ const config = {
     new CssUrlRelativePlugin()
   ],
   devServer: {
-    contentBase: path.join(__dirname, "src")
+    contentBase: path.join(__dirname, "src"),
   },
   optimization: {
     runtimeChunk: "single",
