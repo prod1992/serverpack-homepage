@@ -7,7 +7,7 @@ $("#alert").click(() => {
   alert("jQuery works!");
 });
 
-// Your jQuery code
+// Your jQuery code 
 $(function(){
   $(window).scroll(function(){
   
