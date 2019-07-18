@@ -19,6 +19,12 @@ $(function () {
     }
   })
 
+  $(window).resize(function(){
+    var bodyWidth = $('body').width();
+    $("header").css("max-width", bodyWidth + "px");
+    // $(".elements").css("max-width", bodyWidth + "px");
+  })
+
 
   $(window).scroll(function () {
 

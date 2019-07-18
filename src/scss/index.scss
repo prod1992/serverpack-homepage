@@ -13,10 +13,14 @@ $leapPink: #ff8e88;
 $leapDarkBlue: #1b1f3b;
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden!important;
 }
 body {
   padding: 0;
   overflow-x: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 ::selection {
   background: #c3c4c6;
@@ -75,6 +79,11 @@ header {
   .dropdown-toggle::after {
     display: none;
   }
+  .col-auto{
+    .card{
+      margin: 0;
+    }
+  }
   .dropdown-menu {
     padding: 0;
     border-radius: 30px !important;
@@ -82,7 +91,7 @@ header {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       border-radius: 10px !important;
-}
+    }
     .dropdown-item {
       font-weight: 500;
       color: rgba(73, 80, 87, 0.5);
@@ -117,8 +126,10 @@ header {
   }
   .elements {
     position: fixed;
-    width: 100vw;
-    background: $leapDarkBlue
+    background: $leapDarkBlue;
+    left: 0;
+    box-sizing: initial;
+    max-width: inherit;
   }
   .support{
     width: 300px;
@@ -194,6 +205,7 @@ nav {
 .first-section {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 .container {
   z-index: 1;
@@ -327,7 +339,6 @@ div.rounded {
 .bg-primary-alt {
   background: #f3f5fb;
 }
-
 .carousel-cell:not(.is-selected) {
   transform: scale(0.9);
   opacity: 0.25;
@@ -342,7 +353,15 @@ div.rounded {
     display: none;
   }
 }
-
+.layer-1 {
+  z-index: 1;
+}
+.layer-2 {
+  z-index: 2;
+}
+.accordion-panel-title[aria-expanded="true"] > *, .accordion-panel-title:hover > * {
+  color: #3755BE;
+}
 .divider:not(:first-child) {
   top: 1px;
 }
@@ -370,8 +389,6 @@ div.rounded {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
   @media screen and (min-width: 992px) {
     width: 4.5rem;
     height: 4.5rem;
@@ -402,6 +419,9 @@ div.rounded {
   list-style: none;
   display: flex;
   margin-bottom: 0;
+}
+.avatars > li:not(:last-child) {
+  margin-right: -0.75rem;
 }
 .avatars > li {
   position: relative;
