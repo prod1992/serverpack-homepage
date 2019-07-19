@@ -226,6 +226,9 @@ nav {
 .display-2 {
   font-size: 5.5rem;
   font-weight: 500;
+  @media screen and (max-width: 400px) {
+    font-size: 3.5rem;
+  }
 }
 .display-4 {
   line-height: 4rem;
@@ -292,6 +295,7 @@ div.rounded {
 }
 .pt-0 {
   z-index: 2;
+  // position: relative;
   a {
     // color: black;
     text-decoration: none;
@@ -420,6 +424,9 @@ div.rounded {
   display: flex;
   margin-bottom: 0;
 }
+.modal-body{
+  z-index: 2;
+}
 .avatars > li:not(:last-child) {
   margin-right: -0.75rem;
 }
@@ -431,6 +438,9 @@ div.rounded {
 }
 [data-recaptcha]:not([data-size="invisible"]) {
   margin-bottom: 0.75rem;
+}
+.rc-anchor-normal{
+  width: 100%!important;
 }
 footer {
   padding: 6rem 0;
