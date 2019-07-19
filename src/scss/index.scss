@@ -130,6 +130,8 @@ header {
     left: 0;
     box-sizing: initial;
     max-width: inherit;
+    max-height: calc(100vh - 250px);
+    overflow: auto;
   }
   .support{
     width: 300px;
@@ -439,8 +441,12 @@ div.rounded {
 [data-recaptcha]:not([data-size="invisible"]) {
   margin-bottom: 0.75rem;
 }
-.rc-anchor-normal{
-  width: 100%!important;
+.notrobot{
+  @media screen and (max-width: 400px) {
+    width: 160%;
+    transform: scale(0.8) translate(-32px, -6px);
+  }
+
 }
 footer {
   padding: 6rem 0;
