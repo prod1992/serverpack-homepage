@@ -59,7 +59,7 @@
     "flickity": "^2.2.1",
     "hover.css": "^2.3.2",
     "isotope-layout": "^3.0.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.14",
     "popper.js": "^1.15.0",
     "scrollmonitor": "^1.2.4",
